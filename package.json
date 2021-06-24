@@ -1,0 +1,22 @@
+{
+  "name": "quiz-portal",
+  "version": "1.0.0",
+  "description": "A web application for hosting online quiz and trivia consisting of 3 major parts Frontend, Backend and Database.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "Devansh Chaudhary",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14"
+  },
+  "devDependencies": {}
+}
