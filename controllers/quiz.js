@@ -10,7 +10,7 @@ async function getQuestion(quizParam) {
     // getting the question
     const question = await Question.findOne({ questionIndex: user.current_question });
     return {
-        ...question.getQuestion(user.question_type)
+        ...question.getQuestion(question.question_type)
     };
 }
 
