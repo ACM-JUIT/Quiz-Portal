@@ -4,13 +4,8 @@ const Schema = mongoose.Schema;
 const questionSchema = new Schema({
     questionIndex: { type: Number, unique: true, required: true },
     questionType: {type: String, required: true},
-    textQuestion: { 
-        question: { type: String },
-        description: { type: String },
-        answer: { type: String }
-    },
-    mcqQuestion: { 
-        question: { type: String },
+    questionData: { 
+        question: { type: String, required: true },
         description: { type: String },
         options:{
             a: { type: String },
@@ -18,7 +13,7 @@ const questionSchema = new Schema({
             c: { type: String },
             d: { type: String }
          },
-        answer: { type: String }
+        answer: { type: String, required: true }
     },
     createdDate: { type: Date, default: Date.now }
 });
@@ -36,33 +31,26 @@ questionSchema.set('toJSON', {
 questionSchema.methods = {
 
     getQuestion: function(ques_type) {
-        if(ques_type == "text"){
+        if(ques_type=="text"){
             return {
-                "questionType": this.questionType,
-                "question": this.textQuestion.question,
-                "description": this.textQuestion.description
-            };
+                    "questionType": this.questionType,
+                    "question": this.questionData.question,
+                    "description": this.questionData.description,
+                };
         }
 
-        if(ques_type == "mcq"){
+        if(ques_type=="mcq"){
             return {
-                "questionType": this.questionType,
-                "question": this.mcqQuestion.question,
-                "description": this.mcqQuestion.description,
-                "options": this.mcqQuestion.options
-            };
+                    "questionType": this.questionType,
+                    "question": this.questionData.question,
+                    "description": this.questionData.description,
+                    "options": this.questionData.options
+                };
         }
-      
     },
 
-    checkAnswer: function(ques_type) {
-        if(ques_type == "text"){
-            return this.textQuestion.answer;
-        }
-
-        if(ques_type == "mcq"){
-            return this.mcqQuestion.answer;
-        }
+    checkAnswer: function() {
+        return this.questionData.answer;
     }
     
 }
