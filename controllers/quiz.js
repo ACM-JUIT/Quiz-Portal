@@ -32,10 +32,10 @@ async function checkAnswer(quizParam) {
         Object.assign(user, userParam);
         await user.save();
 
-        return "Corrent";
+        return {"Message": "Corrent"};
     }
     else {
-        return "In-corrent";
+        return {"Message": "Wrong"};
     };
 }
 
