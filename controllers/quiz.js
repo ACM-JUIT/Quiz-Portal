@@ -10,7 +10,7 @@ async function getQuestion(quizParam) {
     // getting the question
     const question = await Question.findOne({ questionIndex: user.current_question });
     return {
-        ...question.getQuestion(question.question_type)
+        ...question.getQuestion(question.questionType)
     };
 }
 
@@ -23,7 +23,7 @@ async function checkAnswer(quizParam) {
     const question = await Question.findOne({ questionIndex: user.current_question });
     
     //Checking if the answer is correct
-    if(quizParam.answer == question.checkAnswer(user.question_type)){
+    if(quizParam.answer == question.checkAnswer(question.questionType)){
 
         //Updating to next Question
         var userParam = user;

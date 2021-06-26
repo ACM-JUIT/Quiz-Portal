@@ -12,7 +12,12 @@ const questionSchema = new Schema({
     mcqQuestion: { 
         question: { type: String },
         description: { type: String },
-        options:{ type: Array },
+        options:{
+            a: { type: String },
+            b: { type: String },
+            c: { type: String },
+            d: { type: String }
+         },
         answer: { type: String }
     },
     createdDate: { type: Date, default: Date.now }
