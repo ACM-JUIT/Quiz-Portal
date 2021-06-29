@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const quizSchema = new Schema({
     user_id: { type: String, unique: true, required: true },
     user_name: { type: String, unique: true, required: true },
-    current_question: { type: Number, default: 1 }
+    current_question: { type: Number, default: 1 },
+    last_submit_date: { type: Date, default: Date.now }
 });
 
 quizSchema.set('toJSON', {
