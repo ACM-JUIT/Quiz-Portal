@@ -28,6 +28,7 @@ async function checkAnswer(quizParam) {
         //Updating to next Question
         var userParam = user;
         userParam.current_question = user.current_question + 1;
+        userParam.last_submit_date = Date.now;
 
         Object.assign(user, userParam);
         await user.save();
@@ -39,7 +40,12 @@ async function checkAnswer(quizParam) {
     };
 }
 
+async function leaderboard() {
+    return await Quiz.find({},{ user_id: 0, _id: 0 }).sort({"current_question":-1,"last_submit_date":1})
+}
+
 module.exports ={
     getQuestion,
-    checkAnswer
+    checkAnswer,
+    leaderboard
 }
