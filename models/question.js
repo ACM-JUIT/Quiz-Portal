@@ -13,7 +13,8 @@ const questionSchema = new Schema({
             c: { type: String },
             d: { type: String }
          },
-        answer: { type: String, required: true }
+        answer: { type: String, required: true },
+        skippable: {type: String, required: true, default: false}
     },
     createdDate: { type: Date, default: Date.now }
 });
@@ -36,6 +37,7 @@ questionSchema.methods = {
                     "questionType": this.questionType,
                     "question": this.questionData.question,
                     "description": this.questionData.description,
+                    "skippable": this.questionData.skippable
                 };
         }
 
@@ -44,13 +46,18 @@ questionSchema.methods = {
                     "questionType": this.questionType,
                     "question": this.questionData.question,
                     "description": this.questionData.description,
-                    "options": this.questionData.options
+                    "options": this.questionData.options,
+                    "skippable": this.questionData.skippable
                 };
         }
     },
 
     checkAnswer: function() {
         return this.questionData.answer;
+    },
+
+    checkSkippable: function() {
+        return this.questionData.skippable;
     }
     
 }
