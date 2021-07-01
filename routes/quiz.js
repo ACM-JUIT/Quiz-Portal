@@ -26,7 +26,7 @@ function leaderboard(req, res, next) {
 }
 
 function skipQuestion(req, res, next) {
-    quizController.leaderboard(req.body)
+    quizController.skipQuestion(req.body)
     .then(result => result ? res.json(result) : res.status(400).json({ message: 'Internal Error' }))
     .catch(err => next(err));
 }
