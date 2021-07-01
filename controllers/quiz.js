@@ -53,11 +53,11 @@ async function skipQuestion(quizParam) {
         const question = await Question.findOne({ questionIndex: user.current_question });
 
         //Checking if question is skippable
-        if(question.checkSkippable){
+        if(question.checkSkippable()){
             //Updating to next Question
             var userParam = user;
             userParam.current_question = user.current_question + 1;
-            userParam.last_submit_date = Date.now;
+            //userParam.last_submit_date = Date.now;
     
             Object.assign(user, userParam);
             await user.save();
