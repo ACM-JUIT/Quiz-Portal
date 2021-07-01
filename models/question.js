@@ -34,6 +34,7 @@ questionSchema.methods = {
     getQuestion: function(ques_type) {
         if(ques_type=="text"){
             return {
+                    "questionIndex": this.questionIndex,
                     "questionType": this.questionType,
                     "question": this.questionData.question,
                     "description": this.questionData.description,
@@ -43,6 +44,7 @@ questionSchema.methods = {
 
         if(ques_type=="mcq"){
             return {
+                    "questionIndex": this.questionIndex,
                     "questionType": this.questionType,
                     "question": this.questionData.question,
                     "description": this.questionData.description,
