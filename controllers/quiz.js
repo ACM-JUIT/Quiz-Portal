@@ -25,9 +25,10 @@ async function checkAnswer(quizParam) {
     //Checking if the answer is correct
     if(quizParam.answer == question.checkAnswer(question.questionType)){
 
-        //Updating to next Question
+        //Updating to next Question and increase a score
         var userParam = user;
         userParam.current_question = user.current_question + 1;
+        userParam.score = user.score + 1;
         userParam.last_submit_date = Date.now;
 
         Object.assign(user, userParam);
@@ -41,7 +42,7 @@ async function checkAnswer(quizParam) {
 }
 
 async function leaderboard() {
-    return await Quiz.find({},{ user_id: 0, _id: 0 }).sort({"current_question":-1,"last_submit_date":1})
+    return await Quiz.find({},{ user_id: 0, _id: 0 }).sort({"score":-1,"last_submit_date":1})
 }
 
 async function skipQuestion(quizParam) {
