@@ -3,10 +3,18 @@ const Schema = mongoose.Schema;
 
 const questionSchema = new Schema({
     questionIndex: { type: Number, unique: true, required: true },
-    textQuestion: { 
+    questionType: {type: String, required: true},
+    questionData: { 
         question: { type: String, required: true },
-        description: { type: String, required: true },
-        answer: { type: String, required: true }
+        description: { type: String },
+        options:{
+            a: { type: String },
+            b: { type: String },
+            c: { type: String },
+            d: { type: String }
+         },
+        answer: { type: String, required: true },
+        skippable: {type: String, required: true, default: false}
     },
     createdDate: { type: Date, default: Date.now }
 });
@@ -24,15 +32,36 @@ questionSchema.set('toJSON', {
 questionSchema.methods = {
 
     getQuestion: function(ques_type) {
-        return {
-            "question": this.textQuestion.question,
-            "description": this.textQuestion.description
-        };
+        if(ques_type=="text"){
+            return {
+                    "questionIndex": this.questionIndex,
+                    "questionType": this.questionType,
+                    "question": this.questionData.question,
+                    "description": this.questionData.description,
+                    "skippable": this.questionData.skippable
+                };
+        }
+
+        if(ques_type=="mcq"){
+            return {
+                    "questionIndex": this.questionIndex,
+                    "questionType": this.questionType,
+                    "question": this.questionData.question,
+                    "description": this.questionData.description,
+                    "options": this.questionData.options,
+                    "skippable": this.questionData.skippable
+                };
+        }
     },
 
-    checkAnswer: function(ques_type) {
-        return this.textQuestion.answer;
+    checkAnswer: function() {
+        return this.questionData.answer;
+    },
+
+    checkSkippable: function() {
+        return this.questionData.skippable;
     }
+    
 }
 
 module.exports = mongoose.model('Question', questionSchema);

@@ -5,7 +5,8 @@ const quizSchema = new Schema({
     user_id: { type: String, unique: true, required: true },
     user_name: { type: String, unique: true, required: true },
     current_question: { type: Number, default: 1 },
-    question_type: { type: String, default: "text" }
+    last_submit_date: { type: Date, default: Date.now },
+    score:{type: Number, default: 0}
 });
 
 quizSchema.set('toJSON', {
