@@ -3,14 +3,18 @@ const bodyParser = require('body-parser');
 const db = require('./util/database');
 const errorHandler = require('./util/error-handler');
 const jwt = require('./util/jwt');
+var cors = require('cors')
+
+
 
 const app = express();
 const port = process.env.PORT || 80;
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-app.use(jwt());
+// app.use(jwt());
 
 const userRoutes = require('./routes/user');
 const questionRoutes = require('./routes/question');

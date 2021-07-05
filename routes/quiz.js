@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const quizController = require('../controllers/quiz');
 
-router.get('/getQuestion', getQuestion);
+router.post('/getQuestion', getQuestion);
 router.post('/checkAnswer', checkAnswer);
 router.post('/leaderboard', leaderboard);
 router.post('/skipQuestion', skipQuestion);
