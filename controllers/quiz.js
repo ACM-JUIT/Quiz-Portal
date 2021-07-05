@@ -29,7 +29,7 @@ async function checkAnswer(quizParam) {
         var userParam = user;
         userParam.current_question = user.current_question + 1;
         userParam.score = user.score + 1;
-        userParam.last_submit_date = Date.now;
+        userParam.last_submit_date =  new Date();
 
         Object.assign(user, userParam);
         await user.save();
