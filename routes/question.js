@@ -19,7 +19,7 @@ function getQuesion(req, res, next) {
 
 function addQuestion(req, res, next) {
     questionController.create(req.body)
-        .then(() => res.json({"messgae": "Question Added"}))
+        .then(() => res.json({"Message": "Question Added"}))
         .catch(err => next(err));
 }
 
