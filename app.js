@@ -5,8 +5,6 @@ const errorHandler = require('./util/error-handler');
 const jwt = require('./util/jwt');
 var cors = require('cors')
 
-
-
 const app = express();
 const port = process.env.PORT || 80;
 
