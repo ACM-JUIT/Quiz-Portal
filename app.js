@@ -12,7 +12,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-// app.use(jwt());
+app.use(jwt());
 
 const userRoutes = require('./routes/user');
 const questionRoutes = require('./routes/question');
