@@ -37,10 +37,10 @@ async function checkAnswer(quizParam) {
         Object.assign(user, userParam);
         await user.save();
 
-        return {"Message": "Corrent"};
+        return {"message": "Corrent"};
     }
     else {
-        return {"Message": "Wrong"};
+        return {"message": "Wrong"};
     };
 }
 
@@ -65,10 +65,10 @@ async function skipQuestion(quizParam) {
             Object.assign(user, userParam);
             await user.save();
     
-            return {"Message": "Question Skipped."};
+            return {"message": "Question Skipped."};
         }
         else {
-            return {"Message": "Question can't be Skipped."};
+            return {"message": "Question can't be Skipped."};
         };
 }
 
