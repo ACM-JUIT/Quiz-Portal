@@ -6,7 +6,10 @@ require('dotenv').config();
 async function getQuestion(quizParam) {
     // finding on which question the user is
     const user = await Quiz.findOne({ user_id: quizParam.id });
-
+    if(user.current_question > process.env.total_question )
+    return{
+        message: "Quiz Completed"
+    }
     // getting the question
     const question = await Question.findOne({ questionIndex: user.current_question });
     return {
