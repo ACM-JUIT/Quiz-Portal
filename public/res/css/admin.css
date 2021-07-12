@@ -1,0 +1,109 @@
+* { box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-size: 18px;
+  background: deepskyblue;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  padding: 50px;
+  background: white;
+  text-align: center;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px dashed lightblue;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+input:focus { border-color: deepskyblue; }
+
+button {
+
+  left: calc(50% - 150px / 2);
+  bottom: calc(- 50px / 2);
+  width: 150px;
+  height: 50px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  background: mediumblue;
+  transition: all 0.2s ease;
+}
+
+button:hover { background: midnightblue; }
+
+button.valid,
+button.valid:hover { background: mediumseagreen; }
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+svg path {
+  stroke-width: 10px;
+  stroke: mediumseagreen;
+  fill: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+svg path.hidden { opacity: 0; }
+
+svg path.animate { animation: drawBorder 1s linear; }
+
+@keyframes drawBorder {
+  from {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+  }
+  
+  to {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 0;
+  }
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+}

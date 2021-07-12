@@ -1,0 +1,62 @@
+/* CSS Document */
+
+*{
+padding:5;
+margin:10;
+}
+body{
+background-color:black;
+width:9268.75;
+height:5500;
+display: inline-block;
+
+}
+.signup{
+width:250%;
+height:350%;
+background-color: darkgray;
+color:#000000;
+font-family:Verdana;
+margin-left:218.5%;
+margin-right:70;
+display: inline-block;
+}
+h1{
+padding-top:12%;
+background-color:blue;
+font-size:230%;
+}
+input[type=" password"]{
+padding: 20 40;
+border=none;
+background-color: #FFFFFF;
+color:#eb3349;
+border: 2% solid #eb3349;
+margin-top: 50%;
+font-weight: 600;
+}
+input[type=" submit"]{
+text-decoration: none;
+color:   navy blue;
+padding: 10% 20%;
+background-image: linear-gradient(black, blue);
+font-size: 18%;
+font-weight: 1000;
+font-family: "Lucida Console", Monaco, monospace;
+border-radius: 125%;
+border:none;
+margin-top: 125%;
+}
+.signup a{
+text-decoration: none;
+color: blue;
+padding:10  100;
+font-family: "Lucia Console, Monaco, monospace;
+}
+.signup a:hover{
+text-decoration:none;
+color:purple;
+background-image:linear-gradient(#80080, #9370DB);
+border-radius: 10px;
+}
+
