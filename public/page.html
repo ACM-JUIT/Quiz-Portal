@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Code Mania</title>
+    <link rel="stylesheet" href="res/css/page.css">
+</head>
+<body>
+    <div id ="question">
+
+    <div id= "questiontext">
+        <h1 id = "txt index"> </h1>
+        <h1 id = "txt ques"> </h1>
+        <h2 id = "txt desc"> </h1>
+    </div>
+
+    <div  id= "questionmcq">
+        <h1 id = "mcq index"> </h1>
+        <h1 id = "mcq ques"> </h1>
+        <h2 id = "mcq desc"> </h1>
+        <h4 id= "opt A"> </h4>
+        <h4 id= "opt B"> </h4>
+        <h4 id= "opt C"> </h4>
+        <h4 id= "opt D"> </h4>
+    </div>
+
+    <input type="text" name="name" id="ans" placeholder="Enter your answer here">
+    <button id="check" onclick="checkAnswer()" >CHECK</button>
+    <button id="skip" onclick="skipquestion()">SKIP</button>
+    <div id="response_a">CORRECT ANSWER</div>
+
+    </div>
+
+<script src="res/js/script.js"></script>
+<script> getQuestion() </script>
+
+</body>
+</html>

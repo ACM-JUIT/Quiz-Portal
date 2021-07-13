@@ -6,7 +6,10 @@ require('dotenv').config();
 async function getQuestion(quizParam) {
     // finding on which question the user is
     const user = await Quiz.findOne({ user_id: quizParam.id });
-
+    if(user.current_question > process.env.total_question )
+    return{
+        message: "Quiz Completed"
+    }
     // getting the question
     const question = await Question.findOne({ questionIndex: user.current_question });
     return {
@@ -29,15 +32,15 @@ async function checkAnswer(quizParam) {
         var userParam = user;
         userParam.current_question = user.current_question + 1;
         userParam.score = user.score + 1;
-        userParam.last_submit_date = Date.now;
+        userParam.last_submit_date =  new Date();
 
         Object.assign(user, userParam);
         await user.save();
 
-        return {"Message": "Corrent"};
+        return {"message": "Corrent"};
     }
     else {
-        return {"Message": "Wrong"};
+        return {"message": "Wrong"};
     };
 }
 
@@ -62,10 +65,10 @@ async function skipQuestion(quizParam) {
             Object.assign(user, userParam);
             await user.save();
     
-            return {"Message": "Question Skipped."};
+            return {"message": "Question Skipped."};
         }
         else {
-            return {"Message": "Question can't be Skipped."};
+            return {"message": "Question can't be Skipped."};
         };
 }
 

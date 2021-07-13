@@ -1,0 +1,29 @@
+
+*{
+    background-color: black;
+    color:white;
+}
+#leaderboard{
+    margin:0 auto;
+    display: block;
+  text-align: center;
+    height:8%;
+    width:16%;
+   
+    border:2px solid blue;
+    display: flex;
+    justify-content:center ;
+   
+}
+th{
+    border:2px solid blue;
+    width:39%;
+}
+td{
+    border:2px solid blue;
+}
+h1{
+    text-align: center;
+            font-size: 3em;
+            color:darkblue;
+}
