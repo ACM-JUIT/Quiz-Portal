@@ -14,7 +14,7 @@
     justify-content: space-around;
     align-items: baseline;
     list-style: none;
-   border: 8px solid black;
+    border: 8px solid black;
 }
 .item{
     font-weight: 500;
@@ -34,21 +34,18 @@ a{
 a:hover{
     color:darkblue;
 }
+
 #start{
-    padding:4%;
-    margin:10% auto;
+    padding: 1.5%;
+    margin: 8% auto;
     font-size: x-large;
-  color:blue;
-  border-color: blue;
+    color:blue;
+    border-color: blue;
     display:block;
-    border-radius:95%;
+    border-radius: 85%;
 }
 h1{
     text-align: center;
-   
-    font-size:3em;
-    margin-top:14%;
+    font-size: 3em;
+    margin-top: 8%;
 }
-
-
-
