@@ -79,6 +79,7 @@ function getQuestion(){
           } else {
             document.getElementById("skip").style.display = "block"
           }
+          document.getElementById("wronganswer").style.display = "none";
           console.log(response)
 
       })
@@ -146,6 +147,7 @@ function skipquestion(){
     fetch("https://acm-quiz-portal.herokuapp.com/quiz/skipQuestion/", requestOptions)
     .then(response => response.json())
     .then(response => {
+        document.getElementById("wronganswer").style.display = "none";
         window.alert("Question Skipped!");
         console.log("Question Skipped!");
         getQuestion();
