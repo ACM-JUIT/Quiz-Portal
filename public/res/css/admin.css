@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-*{
-    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    font-size: 1.2rem;
-    box-sizing: border-box;
+* {
+  font-family: Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.2rem;
+  box-sizing: border-box;
 }
-
 
 html,
 body {
@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  font-family: 'Economica', 'Arial', sans-serif;
+  font-family: "Economica", "Arial", sans-serif;
   font-size: 18px;
   background: deepskyblue;
 }
@@ -45,15 +45,16 @@ input {
   border: 2px dashed lightblue;
   outline: none;
   font-size: 20px;
-  font-family: 'Economica', 'Arial', sans-serif;
+  font-family: "Economica", "Arial", sans-serif;
   font-weight: 400;
   transition: all 0.2s ease;
 }
 
-input:focus { border-color: deepskyblue; }
+input:focus {
+  border-color: deepskyblue;
+}
 
 button {
-
   left: calc(50% - 150px / 2);
   bottom: calc(- 50px / 2);
   width: 150px;
@@ -64,17 +65,21 @@ button {
   outline: none;
   cursor: pointer;
   color: white;
-  font-family: 'Economica', 'Arial', sans-serif;
+  font-family: "Economica", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 700;
   background: mediumblue;
   transition: all 0.2s ease;
 }
 
-button:hover { background: midnightblue; }
+button:hover {
+  background: midnightblue;
+}
 
 button.valid,
-button.valid:hover { background: mediumseagreen; }
+button.valid:hover {
+  background: mediumseagreen;
+}
 
 svg {
   position: absolute;
@@ -91,16 +96,20 @@ svg path {
   transition: opacity 0.5s ease;
 }
 
-svg path.hidden { opacity: 0; }
+svg path.hidden {
+  opacity: 0;
+}
 
-svg path.animate { animation: drawBorder 1s linear; }
+svg path.animate {
+  animation: drawBorder 1s linear;
+}
 
 @keyframes drawBorder {
   from {
     stroke-dasharray: 4000;
     stroke-dashoffset: 4000;
   }
-  
+
   to {
     stroke-dasharray: 4000;
     stroke-dashoffset: 0;

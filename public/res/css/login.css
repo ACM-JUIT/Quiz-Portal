@@ -1,79 +1,90 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-*{
-    background-color: black;
-    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    font-size: 1.2rem;
+* {
+  background-color: black;
+  font-family: Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.2rem;
 }
 
-body{
-    background-color:black;
-    width: 30%;
-    padding-top:2%;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    border:0px solid blue;
+body {
+  background-color: black;
 }
 
-.login{
-    background-color:black;
-    color:#000000;
-    font-family: Verdana;
-    margin:0 auto;
-    text-align: center;
-    border:1px solid blue;
+#cont {
+  width: 30%;
+  padding-top: 2%;
+  text-align: center;
+  margin: 0 auto;
 }
 
-#username{
-    padding:3% 5%;
-    border:2px solid blue;
-    border-radius:5%;
-    color: whitesmoke;
+.login {
+  background-color: black;
+  color: #000000;
+  font-family: Verdana;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid blue;
 }
 
-h1{
-padding-top: 4%;
-font-size:3em;
-color:blue;
+#username {
+  padding: 3% 5%;
+  border: 2px solid blue;
+  border-radius: 5%;
+  color: whitesmoke;
 }
 
-input[type="password"]{
-    padding: 2% 5%;
-    border:2px solid blue;
-    font-weight:normal;
-    border-radius:5%;
-    color: whitesmoke;
+h1 {
+  padding-top: 4%;
+  font-size: 3em;
+  color: blue;
 }
 
-input[type="button"]{
-    text-decoration: none;
-    color:blue;
-    padding:2% 2%;
-    font-size:1em;
-    text-align:center;
-    font-weight:bolder;
-    font-family: "Lucida Console", Monaco, monospace;
-    border-radius: 8%;
-    border: 2px solid blue;
+input[type="password"] {
+  padding: 2% 5%;
+  border: 2px solid blue;
+  font-weight: normal;
+  border-radius: 5%;
+  color: whitesmoke;
 }
 
-input[type="button"]:hover{
-    color:purple;
+input[type="button"] {
+  text-decoration: none;
+  color: blue;
+  padding: 2% 2%;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bolder;
+  font-family: "Lucida Console", Monaco, monospace;
+  border-radius: 8%;
+  border: 2px solid blue;
 }
 
-.login a{
-    text-decoration: none;
-    color: blue;
-    font-family: "Lucia Console, Monaco, monospace";
+input[type="button"]:hover {
+  color: purple;
 }
 
-.login a:hover{
-    text-decoration:none;
-    color:purple;
+.login a {
+  text-decoration: none;
+  color: blue;
+  font-family: "Lucia Console, Monaco, monospace";
 }
 
-#unauth{
-    color: red;
-    display: none;
+.login a:hover {
+  text-decoration: none;
+  color: purple;
+}
+
+#unauth {
+  color: red;
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #cont {
+    width: 95%;
+  }
+  .login {
+    border: none;
+  }
 }

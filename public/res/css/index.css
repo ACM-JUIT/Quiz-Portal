@@ -1,51 +1,71 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-*{
-    background-color: black;
-    color:white;
-    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    font-size: 1.2rem;
+* {
+  background-color: black;
+  font-family: Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
 }
 
-
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    list-style: none;
-    border: 8px solid black;
-}
-.item{
-    font-weight: 500;
-    font-size:0.8em;
-    padding:2% 2%;
-    flex-grow: 1;
-    font-weight: bolder;
-    text-align: center;
-    font-family:'Benne', serif;
-} 
-
-a{
-    text-decoration: none;
-    cursor: pointer;
-    
-}
-a:hover{
-    color:darkblue;
+body {
+  font-size: 1.2rem;
 }
 
-#start{
-    padding: 1.5%;
-    margin: 8% auto;
-    font-size: x-large;
-    color:blue;
-    border-color: blue;
-    display:block;
-    border-radius: 85%;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  list-style: none;
+  border: 8px solid black;
+  font-size: 1.2rem;
 }
-h1{
-    text-align: center;
-    font-size: 3em;
-    margin-top: 8%;
+
+.item {
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 2% 2%;
+  flex-grow: 1;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+#start {
+  padding: 1.5%;
+  margin: 8% auto;
+  font-size: x-large;
+  color: blue;
+  border-color: blue;
+  display: block;
+  border-radius: 85%;
+}
+
+#start:hover {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 8%;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .item {
+    font-size: 0.8rem;
+  }
+  h1 {
+    margin-top: 50%;
+  }
 }

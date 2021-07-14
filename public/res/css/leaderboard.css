@@ -1,58 +1,70 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-*{
-    background-color: black;
-    color:white;
-    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    font-size: 1.2rem;
+* {
+  background-color: black;
+  font-family: Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
 }
 
-#leaderboard{
-    margin:0 auto;
-    display: block;
-    text-align: center;
-    height: 8%;
-    width: 16%;
-    display: flex;
-    justify-content:center ;  
+body {
+  color: white;
+  font-size: 1.2rem;
 }
 
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    list-style: none;
-    border: 8px solid black;
-}
-.item{
-    font-weight: 500;
-    font-size:0.8em;
-    padding:2% 2%;
-    flex-grow: 1;
-    font-weight: bolder;
-    text-align: center;
-    font-family:'Benne', serif;
-} 
-
-a{
-    text-decoration: none;
-    cursor: pointer;
+#leaderboard {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  height: 8%;
+  width: 16%;
+  display: flex;
+  justify-content: center;
 }
 
-a:hover{
-    color:darkblue;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  list-style: none;
+  border: 8px solid black;
+}
+.item {
+  font-weight: 500;
+  font-size: 0.8em;
+  padding: 2% 2%;
+  flex-grow: 1;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Benne", serif;
 }
 
-th{
-    border:2px solid blue;
-    width:39%;
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
-td{
-    border:2px solid blue;
+
+a:hover {
+  color: darkblue;
 }
-h1{
-    text-align: center;
-    font-size: 3em;
-    color:darkblue;
+
+th {
+  border: 2px solid blue;
+  width: 39%;
+  padding: 0.5em;
+}
+td {
+  border: 2px solid blue;
+  padding: 0.5em;
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: darkblue;
+}
+@media only screen and (max-width: 600px) {
+  .item {
+    font-size: 0.8rem;
+  }
 }

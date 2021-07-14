@@ -1,80 +1,87 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-*{
-    background-color: black;
-    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    font-size: 1.2rem;
+* {
+  background-color: black;
+  font-family: Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.2rem;
 }
 
-.b{
-    
-    width:30%;
-    padding-top:2%;
-    text-align: center;
-    border: 2px solid blue;
-    margin: 0 auto;
-    display: block;
-}
-.signup{
-    color:#000000;
-    font-family:Verdana;
-    text-align:center;
+#cont {
+  width: 30%;
+  padding-top: 2%;
+  text-align: center;
+  margin: 0 auto;
 }
 
-h1{
-    padding-top:4%;
-    font-size:3em;
-    color:blue;
+.signup {
+  color: #000000;
+  font-family: Verdana;
+  text-align: center;
 }
 
-input[type="password"]{
-    padding: 2% 5%;
-    border:2px solid blue;
-    font-weight:normal;
-    border-radius:5%;
-    color:blue ;
-}
-input[type="email"]{
-    padding:2% 5%;
-    border:2px solid blue;
-    font-weight:normal;
-    border-radius:5%;
-    color:blue ;
-}
-input[type="text"]{
-    padding: 2% 5%;
-    border:2px solid blue;
-    font-weight:normal;
-    border-radius:5%;
-    color:blue ;
-}
-input[type="button"]{
-    text-decoration: none;
-    color:blue;
-    padding:2% 2%;
-    font-size:1em;
-    text-align:center;
-    font-weight:bolder;
-    font-family: "Lucida Console, Monaco, monospace";
-    border-radius: 8%;
-    border: 2px solid blue;
+h1 {
+  padding-top: 4%;
+  font-size: 3em;
+  color: blue;
 }
 
-.b input[type="button"]:hover{
-    color: purple;
+input[type="password"] {
+  padding: 2% 5%;
+  border: 2px solid blue;
+  font-weight: normal;
+  border-radius: 5%;
+  color: blue;
+}
+input[type="email"] {
+  padding: 2% 5%;
+  border: 2px solid blue;
+  font-weight: normal;
+  border-radius: 5%;
+  color: blue;
+}
+input[type="text"] {
+  padding: 2% 5%;
+  border: 2px solid blue;
+  font-weight: normal;
+  border-radius: 5%;
+  color: blue;
+}
+input[type="button"] {
+  text-decoration: none;
+  color: blue;
+  padding: 2% 2%;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bolder;
+  font-family: "Lucida Console, Monaco, monospace";
+  border-radius: 8%;
+  border: 2px solid blue;
 }
 
-label{
-    color:blue;
-}
-.b a{
-    text-decoration: none;
-    color: blue;
-    padding:10  100;
-    font-family: "Lucia Console, Monaco, monospace";
-}
-.b a:hover{
-    text-decoration:none;
-    color:purple;
+.b input[type="button"]:hover {
+  color: purple;
 }
 
+label {
+  color: blue;
+}
+.b a {
+  text-decoration: none;
+  color: blue;
+  padding: 10 100;
+  font-family: "Lucia Console, Monaco, monospace";
+}
+.b a:hover {
+  text-decoration: none;
+  color: purple;
+}
+
+@media only screen and (max-width: 600px) {
+  #cont {
+    width: 95%;
+  }
+  .signup {
+    border: none;
+  }
+}
