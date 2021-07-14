@@ -14,7 +14,7 @@ body{
     margin: 0 auto;
     display: block;
     border:0px solid blue;
-    }
+}
 
 .login{
     background-color:black;
@@ -71,4 +71,9 @@ input[type="button"]:hover{
 .login a:hover{
     text-decoration:none;
     color:purple;
+}
+
+#unauth{
+    color: red;
+    display: none;
 }
