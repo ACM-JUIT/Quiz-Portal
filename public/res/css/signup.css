@@ -1,62 +1,78 @@
 /* CSS Document */
 
-*{
-padding:5;
-margin:10;
-}
-body{
-background-color:black;
-width:9268.75;
-height:5500;
-display: inline-block;
 
+*{
+    background-color: black;
+}
+.b{
+    
+    width:30%;
+    padding-top:2%;
+    text-align: center;
+    border: 2px solid blue;
+    margin: 0 auto;
+    display: block;
 }
 .signup{
-width:250%;
-height:350%;
-background-color: darkgray;
-color:#000000;
-font-family:Verdana;
-margin-left:218.5%;
-margin-right:70;
-display: inline-block;
+    color:#000000;
+    font-family:Verdana;
+    text-align:center;
 }
+
 h1{
-padding-top:12%;
-background-color:blue;
-font-size:230%;
+    padding-top:4%;
+    font-size:3em;
+    color:blue;
 }
-input[type=" password"]{
-padding: 20 40;
-border=none;
-background-color: #FFFFFF;
-color:#eb3349;
-border: 2% solid #eb3349;
-margin-top: 50%;
-font-weight: 600;
+
+input[type="password"]{
+    padding: 2% 5%;
+    border:2px solid blue;
+    font-weight:normal;
+    border-radius:5%;
+    color:blue ;
 }
-input[type=" submit"]{
-text-decoration: none;
-color:   navy blue;
-padding: 10% 20%;
-background-image: linear-gradient(black, blue);
-font-size: 18%;
-font-weight: 1000;
-font-family: "Lucida Console", Monaco, monospace;
-border-radius: 125%;
-border:none;
-margin-top: 125%;
+input[type="email"]{
+    padding:2% 5%;
+    border:2px solid blue;
+    font-weight:normal;
+    border-radius:5%;
+    color:blue ;
 }
-.signup a{
-text-decoration: none;
-color: blue;
-padding:10  100;
-font-family: "Lucia Console, Monaco, monospace;
+input[type="text"]{
+    padding: 2% 5%;
+    border:2px solid blue;
+    font-weight:normal;
+    border-radius:5%;
+    color:blue ;
 }
-.signup a:hover{
-text-decoration:none;
-color:purple;
-background-image:linear-gradient(#80080, #9370DB);
-border-radius: 10px;
+input[type="button"]{
+    text-decoration: none;
+    color:blue;
+    padding:2% 2%;
+    font-size:1em;
+    text-align:center;
+    font-weight:bolder;
+    font-family: "Lucida Console, Monaco, monospace";
+    border-radius: 8%;
+    border: 2px solid blue;
+}
+
+.b input[type="button"]:hover{
+    color: purple;
+}
+
+label{
+    color:blue;
+}
+.b a{
+    text-decoration: none;
+    color: blue;
+    padding:10  100;
+    font-family: "Lucia Console, Monaco, monospace";
+}
+.b a:hover{
+    text-decoration:none;
+    color:purple;
 }
 

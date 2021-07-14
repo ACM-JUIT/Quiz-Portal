@@ -1,65 +1,71 @@
 /*CSS Document */
-
-
 *{
-padding: 8;
-margin: 15;
+    background-color: black;
 }
+
 body{
-background-color:black;
-width: 9268.75;
-height: 5500;
-}
+    background-color:black;
+    width: 30%;
+    padding-top:2%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border:0px solid blue;
+    }
+
 .login{
-width: 33.9%;
-height: 300%;
-background-color:darkgray;
-color:#000000;
-font-family: Verdana;
-margin-left: 33.5%;
-margin-right: 30;
+    background-color:black;
+    color:#000000;
+    font-family: Verdana;
+    margin:0 auto;
+    text-align: center;
+    border:1px solid blue;
 }
+
+#username{
+    padding:3% 5%;
+    border:2px solid blue;
+    border-radius:5%;
+    color: whitesmoke;
+}
+
 h1{
-padding-top: 10%;
-background-color:blue; 
-font-size:230%;
+padding-top: 4%;
+font-size:3em;
+color:blue;
 }
-hr{
-color: #eb3349;
+
+input[type="password"]{
+    padding: 2% 5%;
+    border:2px solid blue;
+    font-weight:normal;
+    border-radius:5%;
+    color: whitesmoke;
 }
-input[type=" password"]{
-padding: 20 40;
-border:none;
-background-color: #FFFFFF;
-color:#eb3349;
-border: 2% solid #eb3349;
-margin-top: 50%;
-font-weight: 600;
+
+input[type="button"]{
+    text-decoration: none;
+    color:blue;
+    padding:2% 2%;
+    font-size:1em;
+    text-align:center;
+    font-weight:bolder;
+    font-family: "Lucida Console", Monaco, monospace;
+    border-radius: 8%;
+    border: 2px solid blue;
 }
-input[type=" submit"]{
-text-decoration: none;
-color:   navy blue;
-padding: 10 20
-background-image: linear-gradient(#00008b, #00008b);
-font-size: 	18%;
-font-weight: 1000;
-font-family: "Lucida Console", Monaco, monospace;
-border-radius: 125%;
-border:none;
-margin-top: 125%;
+
+input[type="button"]:hover{
+    color:purple;
 }
+
 .login a{
-text-decoration: none;
-color: blue;
-padding:10  125;
-font-family: "Lucia Console, Monaco, monospace;
+    text-decoration: none;
+    color: blue;
+    font-family: "Lucia Console, Monaco, monospace";
 }
+
 .login a:hover{
-text-decoration:none;
-color:purple;
-background-image:linear-gradient(#80080, #9370DB);
-border-radius: 2.5%;
+    text-decoration:none;
+    color:purple;
 }
-
-
-
