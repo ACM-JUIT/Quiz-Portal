@@ -29,13 +29,17 @@
 a{
     text-decoration: none;
     cursor: pointer;
-    
+}
+
+a:hover{
+    color:darkblue;
 }
 
 #ans{
     padding:3% 3%;
     border-color: blue;
     border-radius: 8%;
+    margin-right: 8px;
 }
     
 #check {
