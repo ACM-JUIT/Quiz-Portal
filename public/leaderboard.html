@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard</title>
-    <link rel="stylesheet" href="res/css/leaderboard.css">
-</head>
-<body>
+    <link rel="stylesheet" href="res/css/leaderboard.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="item">
+          <li><a href="instructions.html">Instructions</a></li>
+        </div>
+        <div class="item">
+          <li><a href="login.html">Log In</a></li>
+        </div>
+        <div class="item">
+          <li><a href="signup.html">Sign Up</a></li>
+        </div>
+        <div class="item">
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+        </div>
+        <div class="item">
+          <li><a onclick="logout_user()">Log Out</a></li>
+        </div>
+      </div>
+    </nav>
+
     <h1>Leaderboard</h1>
     <div id="leaderboard">
-    <table id="leaderboardtable">
-    <thead>
-        <tr>
-          <th>Username</th>
-          <th>Rank</th>
-          <th>Score</th>
-          <th>Current question</th>
-        </tr>
-      </thead>
-      <tbody id="leaderboardbody">
-        
-      </tbody>
-     
-    </table>
-</div>
-<script src="res/js/leaderboard.js"></script>
-</body>
+      <table id="leaderboardtable">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Rank</th>
+            <th>Score</th>
+            <th>Current question</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardbody"></tbody>
+      </table>
+    </div>
+    <script src="res/js/leaderboard.js"></script>
+  </body>
 </html>

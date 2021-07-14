@@ -1,37 +1,86 @@
-*{
-    background-color: black;
-    color:white;
-    }
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
-#ans{
-    padding:1% 1%;
-    border-color: blue;
-    text-align:center;
-    display: block;
-    margin:0 auto;  
+* {
+  background-color: black;
+  color: white;
+  font-family: Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
 }
-    
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  list-style: none;
+  border: 8px solid black;
+}
+
+.item {
+  font-weight: 500;
+  padding: 2% 2%;
+  flex-grow: 1;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Benne", serif;
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+#ans {
+  padding: 3% 3%;
+  border-color: blue;
+  border-radius: 8%;
+  margin-right: 8px;
+}
+
 #check {
-    padding:1% 1%;
-    border:solid 2px darkblue;
-    display: inline;      
-}
-            
-#skip{
-    padding:0.8% 0.8%;
-    margin:0 auto;
-    display: none;
-    border:solid 2px darkblue;
+  padding: 3% 3%;
+  border: solid 2px darkblue;
+  display: inline;
+  border-radius: 8%;
 }
 
-#question{
-    text-align: center;
-    font-size:1em;
-   
+#skip {
+  padding: 3% 3%;
+  border: solid 2px darkblue;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8%;
 }
-#response_a{
-    text-align: center;
-    color:darkgreen;
-    size:0.6em;
-    display: none;
+
+#question {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  margin-top: 5%;
+}
+
+#txtindex {
+  color: thistle;
+}
+
+#wronganswer {
+  color: red;
+  font-size: 1.8rem;
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #question {
+    top: 50%;
+  }
+  .item {
+    font-size: 0.8rem;
+  }
 }

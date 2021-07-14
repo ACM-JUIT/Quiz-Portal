@@ -19,8 +19,13 @@ function signup() {
     fetch("https://acm-quiz-portal.herokuapp.com/user/register", requestOptions)
     .then(response => response.json())
     .then(response => {
-        console.log(response)
-        window.alert(response.message)
+        console.log(response.message)
+        if(response.message == undefined){
+            console.log("Signup")
+            location.replace("login.html");
+        }else{
+            window.alert(response.message)
+        }
     })
     .catch(error => console.log('error', error));
 }
@@ -45,11 +50,17 @@ async function login(){
     .then(response => response.json())
     .then(response => {
         console.log(response)
-        setCookie("token",response.token,7);
-        setCookie("id",response.id,7);
+        if(response.message=="Username or password is incorrect"){
+            document.getElementById("unauth").style.display = "block"
+            return
+        } else{
+            setCookie("token",response.token,7);
+            setCookie("id",response.id,7);
+            location.replace("page.html");
+        }
     })
     .catch(error => console.log('error', error));
-    location.replace("page.html");
+
 }
 
 function setCookie(name,value,exp_days) {

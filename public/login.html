@@ -1,31 +1,43 @@
-<!Doctype html>
-<head>
-<title>Login</title>
-<link rel="stylesheet"  type="text/css"  href="res/css/login.css">
-</head>
-<body>
-<div class= "login">
-<div style="text-align:center">
-<centre><h1>Login</h1>
-       </hr>
-<form method="post"  action="#">
-       <div style="text-align:center">
-       <label style ="color:purple;"> Username</label>
-       <div style="text-align:center">
-       <input type="text"  Name=""  id="username" placeholder=" Enter your username"/> <br> <br>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="res/css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="cont">
+      <div class="b">
+        <div class="login">
+          <h1>Login</h1>
 
-       <label style ="color:purple;">Password</label>
-       <div style="text-align:center">
-       <input type="password"  Name="" id="password" placeholder="Enter the password"/> <br><br><br><br>
-       <div style="text-align:center">
-       <input type="button"  Name=" "  value="  Submit     " onclick="login()">
-       <br><br>
-       <a class="link" href="signup.html" >Haven't registered yet?Sign Up</a><br>
-</form>
-</centre>
-</div>
+          <form>
+            <label style="color: blue">Username</label><br />
+            <input type="text" id="username" placeholder=" Enter the name" />
+            <br />
+            <br />
 
-<script src="res/js/auth.js"> </script>
+            <label style="color: blue">Password</label><br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter the password"
+            />
+            <br /><br />
 
-</body>
+            <label id="unauth">Username or Password Incorrect</label
+            ><br /><br />
+
+            <input type="button" value="Submit" onclick="login()" />
+            <br /><br />
+            <a class="link" href="signup.html">Haven't registered yet?Sign Up</a
+            ><br /><br /><br /><br />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="res/js/auth.js"></script>
+  </body>
 </html>

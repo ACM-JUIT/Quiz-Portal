@@ -50,9 +50,9 @@ function getQuestion(){
             var div = document.getElementById("questiontext");  
             div.style.display = "block"
 
-            document.getElementById("txt index").innerHTML = response.questionIndex
-            document.getElementById("txt ques").innerHTML = response.question
-            document.getElementById("txt desc").innerHTML = response.description
+            document.getElementById("txtindex").innerHTML = response.questionIndex
+            document.getElementById("txtques").innerHTML = response.question
+            document.getElementById("txtdesc").innerHTML = response.description
           }
           if(response.message == "Quiz Completed"){
             window.alert("Quiz Completed");
@@ -67,18 +67,19 @@ function getQuestion(){
             var div = document.getElementById("questiontext");  
             div.style.display = "none"
 
-            document.getElementById("mcq index").innerHTML = response.questionIndex
-            document.getElementById("mcq ques").innerHTML = response.question
-            document.getElementById("opt A").innerHTML = "(a)  " + response.options.a
-            document.getElementById("opt B").innerHTML = "(b)  " +response.options.b
-            document.getElementById("opt C").innerHTML = "(c)  " +response.options.c
-            document.getElementById("opt D").innerHTML = "(d)  " +response.options.d
+            document.getElementById("mcqindex").innerHTML = response.questionIndex
+            document.getElementById("mcqques").innerHTML = response.question
+            document.getElementById("optA").innerHTML = "(a)  " + response.options.a
+            document.getElementById("optB").innerHTML = "(b)  " +response.options.b
+            document.getElementById("optC").innerHTML = "(c)  " +response.options.c
+            document.getElementById("optD").innerHTML = "(d)  " +response.options.d
           }
           if(response.skippable == "false"){
             document.getElementById("skip").style.display = "none"
           } else {
             document.getElementById("skip").style.display = "block"
           }
+          document.getElementById("wronganswer").style.display = "none";
           console.log(response)
 
       })
@@ -112,7 +113,7 @@ function checkAnswer(){
         console.log(response);
         document.getElementById('ans').value = ''
         if(response.message == "Wrong"){
-            window.alert("Try Again")
+            document.getElementById("wronganswer").style.display = "block";
         }
         getQuestion();
     })
@@ -146,6 +147,7 @@ function skipquestion(){
     fetch("https://acm-quiz-portal.herokuapp.com/quiz/skipQuestion/", requestOptions)
     .then(response => response.json())
     .then(response => {
+        document.getElementById("wronganswer").style.display = "none";
         window.alert("Question Skipped!");
         console.log("Question Skipped!");
         getQuestion();

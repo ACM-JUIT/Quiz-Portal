@@ -1,36 +1,55 @@
-<!Doctype html>
-<head>
-<title>Sign Up</title>
-<link rel="stylesheet"  type="text/css"  href="res/css/signup.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="res/css/signup.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <div id="cont">
+      <div class="b">
+        <div class="signup">
+          <h1>Sign Up</h1>
+        </div>
 
+        <form method="post" action="#">
+          <label>Name</label><br />
+          <input type="text" id="name" placeholder="Enter your name " /><br />
+          <br />
 
+          <label> Username </label><br />
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username "
+          /><br /><br />
 
-</head>
-<body>
-	<div class="signup">
-<div style="text-align:center">
-<centre><h1>Sign Up</h1>
-       </hr>
-       <form method="post" action="#">
-              <div style="text-align:center">
-              <div style="text-align:center">
-              <label style="color:purple;">Enter your Name</label>
-              <div style="text-align:center">
-                     <input type="text" id="name" placeholder="Enter your name "><br> <br>  
-              <label style="color:purple;">Enter username</label>
-              <div style="text-align:center">
-                     <input type="text" id="username" placeholder="Enter username"><br> <br>
-              <label style="color:purple;"> Email </label>
-              <div style="text-align:center">
-                     <input type="email" id="email" placeholder="Enter the email "><br><br>
-              <label style="color:purple;"> Password </label>
-              <div style="text-align:center">
-                     <input type="password" id="password" placeholder="Set a password "><br><br>
-              <div style="text-align:center">  
-                     <input type="button" value="Submit" onclick="signup()"><br><br>
-              <a class="link" href="register.php">Already registered?Login</a><br>
-</form>
-</div>
-       <script src="res/js/auth.js"> </script>            
-</body>
+          <label> Email </label><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter the email "
+          /><br /><br />
+
+          <label> Password </label><br />
+          <input
+            type="password"
+            id="password"
+            placeholder="Set a password "
+          /><br /><br />
+
+          <input
+            type="button"
+            value="Submit"
+            onclick="signup()"
+          /><br /><br /><br />
+          <a class="link" href="login.html">Already registered?Login</a
+          ><br /><br /><br /><br />
+        </form>
+      </div>
+    </div>
+    <script src="res/js/auth.js"></script>
+  </body>
 </html>
