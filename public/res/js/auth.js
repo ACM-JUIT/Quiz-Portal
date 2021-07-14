@@ -19,8 +19,13 @@ function signup() {
     fetch("https://acm-quiz-portal.herokuapp.com/user/register", requestOptions)
     .then(response => response.json())
     .then(response => {
-        console.log(response)
-        window.alert(response.message)
+        console.log(response.message)
+        if(response.message == undefined){
+            console.log("Signup")
+            location.replace("login.html");
+        }else{
+            window.alert(response.message)
+        }
     })
     .catch(error => console.log('error', error));
 }
