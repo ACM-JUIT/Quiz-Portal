@@ -1,8 +1,12 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
 *{
     background-color: black;
     color:white;
+    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 1.2rem;
 }
+
 #leaderboard{
     margin:0 auto;
     display: block;

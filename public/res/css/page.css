@@ -1,34 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
 *{
     background-color: black;
     color:white;
-    }
+    font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
 
 #ans{
-    padding:1% 1%;
+    padding:3% 3%;
     border-color: blue;
-    text-align:center;
-    display: block;
-    margin:0 auto;  
+    border-radius: 8%;
 }
     
 #check {
-    padding:1% 1%;
+    padding:3% 3%;
     border:solid 2px darkblue;
-    display: inline;      
+    display: inline;   
+    border-radius: 8%; 
 }
             
 #skip{
-    padding:0.8% 0.8%;
-    margin:0 auto;
-    display: none;
+    padding: 3% 3%;
     border:solid 2px darkblue;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8%;
 }
 
 #question{
     text-align: center;
     font-size:1em;
-   
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%); 
 }
+
 #response_a{
     text-align: center;
     color:darkgreen;
