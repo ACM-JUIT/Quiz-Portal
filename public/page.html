@@ -38,7 +38,13 @@
     </div>
 
 <script src="res/js/script.js"></script>
-<script> getQuestion() </script>
+<script>
+    if(getCookie("token")==""){
+        location.replace("login.html")
+        window.alert("Login First")
+    }
+    getQuestion() 
+</script>
 
 </body>
 </html>
