@@ -7,22 +7,33 @@
     <link rel="stylesheet" href="res/css/page.css">
 </head>
 <body>
+
+    <nav>
+        <div class="container">
+            <div class="item"> <li><a href="instructions.html">Instructions</a></li></div>
+            <div class="item"> <li><a href="login.html">Log In</a></li></div>
+            <div class="item"> <li><a href="signup.html">Sign Up</a></li></div>
+            <div class="item"> <li><a href="leaderboard.html">Leaderboard</a></li></div>
+            <div class="item"> <li><a onclick="logout_user()">Log Out</a></li></div>
+        </div>
+    </nav>
+
     <div id ="question">
 
     <div id= "questiontext">
-        <h1 id = "txt index"> </h1>
-        <h1 id = "txt ques"> </h1>
-        <h2 id = "txt desc"> </h1>
+        <h1 id = "txtindex"> </h1>
+        <h1 id = "txtques"> </h1>
+        <h2 id = "txtdesc"> </h1>
     </div>
 
     <div  id= "questionmcq">
-        <h1 id = "mcq index"> </h1>
-        <h1 id = "mcq ques"> </h1>
-        <h2 id = "mcq desc"> </h1>
-        <h4 id= "opt A"> </h4>
-        <h4 id= "opt B"> </h4>
-        <h4 id= "opt C"> </h4>
-        <h4 id= "opt D"> </h4>
+        <h1 id = "mcqindex"> </h1>
+        <h1 id = "mcqques"> </h1>
+        <h2 id = "mcqdesc"> </h1>
+        <h4 id= "optA"> </h4>
+        <h4 id= "optB"> </h4>
+        <h4 id= "optC"> </h4>
+        <h4 id= "optD"> </h4>
     </div>
 
     <label>
@@ -32,9 +43,10 @@
         </div>
     </label>
     <br><br>
+   
         <button id="skip" onclick="skipquestion()">SKIP</button>
         <div id="response_a">CORRECT ANSWER</div>
-
+        <label id="wronganswer">Try Again</label><br><br>
     </div>
 
 <script src="res/js/script.js"></script>

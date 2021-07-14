@@ -6,6 +6,32 @@
     font-family: Lato,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 }
 
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    list-style: none;
+    border: 8px solid black;
+}
+
+.item{
+    font-weight: 500;
+    font-size:0.8em;
+    padding:2% 2%;
+    flex-grow: 1;
+    font-weight: bolder;
+    text-align: center;
+    font-family:'Benne', serif;
+    font-size: 1.3rem;
+} 
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
 #ans{
     padding:3% 3%;
     border-color: blue;
@@ -40,5 +66,15 @@
     text-align: center;
     color:darkgreen;
     size:0.6em;
+    display: none;
+}
+
+#txtindex{
+    color:thistle;
+}
+
+#wronganswer{
+    color: red;
+    font-size: 1.8rem;
     display: none;
 }
