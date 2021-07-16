@@ -11,7 +11,7 @@ async function authenticate({ username, password }) {
     // validating password and checking if user exists
     if (user && bcrypt.compareSync(password, user.password)) {
         //Creating A Token
-        const token = jwt.sign({ sub: user.username }, process.env.JWT_SECRET, { expiresIn: '86400s' });
+        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '86400s' });
 
         return {
             ...user.toJSON(),

@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const quizController = require('../controllers/quiz');
 
-router.post('/getQuestion', getQuestion);
-router.post('/checkAnswer', checkAnswer);
+router.post('/getQuestion', userVerification, getQuestion);
+router.post('/checkAnswer', userVerification, checkAnswer);
 router.post('/leaderboard', leaderboard);
-router.post('/skipQuestion', skipQuestion);
+router.post('/skipQuestion', userVerification, skipQuestion);
 
 function getQuestion(req, res, next) {
     quizController.getQuestion(req.body)
@@ -31,5 +31,12 @@ function skipQuestion(req, res, next) {
     .catch(err => next(err));
 }
 
+function userVerification(req, res, next) {
+    if(req.user.id==req.body.id){
+        next();
+    }else{
+        res.send("Verification Failed. Trying to hack?");
+    }
+}
 
 module.exports = router;
