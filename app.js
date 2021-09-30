@@ -10,8 +10,7 @@ const app = express();
 const port = process.env.PORT || 80;
 
 app.use(cors())
-app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json());
+app.use(express.json());
 
 //Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
