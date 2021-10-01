@@ -7,7 +7,7 @@ router.post('/checkAnswer', userVerification, checkAnswer);
 router.post('/leaderboard', leaderboard);
 router.post('/skipQuestion', userVerification, skipQuestion);
 
-function getQuestion(req, res, next) {
+const getQuestion = (req, res, next) => {
     quizController.getQuestion(req.body)
         .then(ques => ques ? res.json(ques) : res.status(500).json({ message: 'Internal Error' }))
         .catch(err => next(err));
