@@ -5,13 +5,16 @@ const errorHandler = require('./util/error-handler');
 const jwt = require('./util/jwt');
 var cors = require('cors')
 const path = require('path');
-
+const helmet = require('helmet')
+const mongoSanitize = require('express-mongo-sanitize')
 const app = express();
+app.use(helmet())
 const port = process.env.PORT || 80;
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json());
+app.use(express.json({limit: '10kb'}));
+app.use(mongoSanitize());
 
 //Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
