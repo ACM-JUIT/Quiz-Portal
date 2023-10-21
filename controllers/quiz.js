@@ -37,7 +37,7 @@ async function checkAnswer(quizParam) {
         Object.assign(user, userParam);
         await user.save();
 
-        return {"message": "Corrent"};
+        return {"message": "Correct"};
     }
     else {
         return {"message": "Wrong"};
